@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppLogin.Protegida"
-             Title="Protegida">
-    <VerticalStackLayout VerticalOptions="Center"
-                         Padding="10" Spacing="10">
-        <Frame>
-            <VerticalStackLayout>
-                <Label Text="Área Protegida"
-                       FontSize="Large"
-                       HorizontalTextAlignment="Center" />
-                <Label x:Name="lbl_boasvindas"
-                       HorizontalTextAlignment="Center" />
-                <Button Text="Desconectar"
-                        Clicked="Button_Clicked"
-                        HorizontalOptions="Center" />
-            </VerticalStackLayout>
-        </Frame>
+             x:Class="MauiAppLogin.Protegida">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="Center"
+                         Spacing="20"
+                         Padding="20">
+
+        <Label Text="Área Protegida"
+               FontSize="24"
+               HorizontalOptions="Center"/>
+
+        <Label x:Name="lbl_boasvindas"
+               FontSize="18"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Desconectar"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

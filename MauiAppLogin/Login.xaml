@@ -2,23 +2,56 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppLogin.Login"
-             Title="Login">
-    <VerticalStackLayout VerticalOptions="Center" 
-                         Spacing="10"
-                         Padding="10">
-        
-        <Label Text="Sistema de Login"           
-               HorizontalOptions="Center" />
+             Title="Login"
+             BackgroundColor="White">
+    <!-- fundo branco -->
 
-        <Label Text="Usuário:" />
-        <Entry x:Name="txt_usuario" />
+    <ScrollView>
+        <Grid VerticalOptions="CenterAndExpand"
+              HorizontalOptions="Center">
 
-        <Label Text="Senha:" />
-        <Entry x:Name="txt_senha" IsPassword="True" />
+            <!-- Caixa central simulando tela de celular -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="30"
+                   HasShadow="True"
+                   MaximumWidthRequest="380"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
 
-        <Button Text="Entrar" 
-                Clicked="Button_Clicked" 
-                HorizontalOptions="Center" />
+                <VerticalStackLayout Spacing="25">
 
-    </VerticalStackLayout>
+                    <!-- Título -->
+                    <Label Text="Sistema de Login"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+
+                    <!-- Campo Usuário -->
+                    <Entry x:Name="txt_usuario"
+                           Placeholder="Usuário"
+                           PlaceholderColor="Black"
+                           TextColor="Black"
+                           FontSize="18"/>
+
+                    <!-- Campo Senha -->
+                    <Entry x:Name="txt_senha"
+                           Placeholder="Senha"
+                           PlaceholderColor="Black"
+                           TextColor="Black"
+                           IsPassword="True"
+                           FontSize="18"/>
+
+                    <!-- Botão Entrar -->
+                    <Button Text="Entrar"
+                            Clicked="Button_Clicked"
+                            FontSize="18"
+                            BackgroundColor="#6A0DAD"
+                            TextColor="White"
+                            CornerRadius="12"
+                            HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
 </ContentPage>
